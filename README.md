@@ -158,14 +158,9 @@ pnpm start        # runs the Express server (serves API; pair with a static host
 
 ## 🌐 Live Application URL
 
-**Not deployed yet.** The app runs locally during development.
+**Live:** https://financepal-ai.vercel.app
 
-Deployment is planned via one of these options (see [Deployment](#-deployment)):
-
-- **Frontend** → Vercel/Netlify (static hosting)
-- **Backend** → Render/Railway (Node web service)
-
-Once deployed, the live URL will be listed here.
+Deployed with Vercel (frontend + serverless API under one URL). The chat feature requires an LLM provider key set in the Vercel project's environment variables (`OPENAI_API_KEY` or `OLLAMA_BASE_URL`) — until then the app runs and shows a friendly message when chatting.
 
 ---
 
@@ -260,12 +255,16 @@ The system prompt enforces guardrails: advice is "educational guidance, not lice
 
 ## 🚢 Deployment
 
+**Live deployment:** hosted on Vercel at https://financepal-ai.vercel.app. The repo is connected so pushes to `main` auto-deploy.
+
 **Option A — Free tier (recommended):**
 
 - Frontend → **Vercel** or **Netlify** (static hosting for `client/`)
 - Backend → **Render** or **Railway** (Node web service for `server/`)
 - Set `OPENAI_API_KEY` (or `OLLAMA_BASE_URL`) as platform environment variables
 - Configure CORS on the server to allow your frontend domain
+
+**To set the LLM key on Vercel:** dashboard → your project → Settings → Environment Variables → add `OPENAI_API_KEY` → redeploy (or run `vercel env add OPENAI_API_KEY production`).
 
 **Option B — Self-hosted:**
 
