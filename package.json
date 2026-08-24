@@ -12,9 +12,11 @@
     "dev:server": "pnpm --filter financepal-server dev",
     "dev:client": "pnpm --filter financepal-client dev",
     "build": "pnpm --filter financepal-client build",
+    "vercel:build": "node scripts/vercel-build.mjs && pnpm --filter financepal-client build",
     "start": "pnpm --filter financepal-server start"
   },
   "devDependencies": {
-    "concurrently": "^9.1.2"
+    "concurrently": "^9.1.2",
+    "esbuild": "^0.25.0"
   }
 }

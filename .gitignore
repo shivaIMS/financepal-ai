@@ -25,3 +25,6 @@ login-output.txt
 
 # Command Code session files
 .commandcode/
+
+.vercel
+vercel-login.txt  
