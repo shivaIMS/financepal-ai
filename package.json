@@ -1,0 +1,20 @@
+{
+  "name": "genai-learning",
+  "private": true,
+  "version": "1.0.0",
+  "description": "FinancePal AI - personal AI financial advisor chatbot (learning project)",
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@11.23.0",
+  "scripts": {
+    "dev": "concurrently -n server,client -c blue,green \"pnpm --filter financepal-server dev\" \"pnpm --filter financepal-client dev\"",
+    "dev:server": "pnpm --filter financepal-server dev",
+    "dev:client": "pnpm --filter financepal-client dev",
+    "build": "pnpm --filter financepal-client build",
+    "start": "pnpm --filter financepal-server start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

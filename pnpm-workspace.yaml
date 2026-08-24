@@ -1,0 +1,7 @@
+# pnpm workspace + settings (pnpm 11+ reads settings from here, not package.json)
+packages:
+  - server
+  - client
+
+allowBuilds:
+  esbuild: true
